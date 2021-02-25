@@ -5,9 +5,8 @@ const Canv = styled.canvas`
   border: 2px solid white;
 `;
 
-function Canvas(props) {
+function Canvas() {
   const canvasRef = useRef();
-  const frameRef = useRef();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -32,7 +31,6 @@ function Canvas(props) {
     context.lineTo(250 + w, 250);
     context.closePath();
     context.stroke();
-
   }, []);
 
   return (
